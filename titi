@@ -12,10 +12,10 @@ fi
 echo -ne "\033]0;$SESSION\007"
 
 # Check if user config file exits
-if [ -e /etc/tmux/tmux-$USER.conf ] ; then
-    CONFIG=/etc/tmux/tmux-$USER.conf
+if [ -e ~/.tmux.conf ] ; then
+    CONFIG="~/.tmux.conf"
 else
-    CONFIG=/etc/tmux/.tmux.conf
+    CONFIG="/etc/tmux/tmux.conf"
 fi
 
 # Check if SESSION exits, if not, create it without connecting to it
